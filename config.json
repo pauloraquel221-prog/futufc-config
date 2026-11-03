@@ -1,0 +1,10 @@
+{
+  "ativo": true,
+  "mensagem": "",
+  "addons": [
+    "https://nuviosports.xyz/manifest.json",
+    "https://meufutebol.oneplayhd.com/manifest.json",
+    "https://mediafusion.elfhosted.com/manifest.json",
+    "https://sports.highfly.dev/manifest.json"
+  ]
+}
