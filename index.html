@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FUTUFCTV – Assista Futebol e UFC Ao Vivo no Android</title>
+<meta name="description" content="Sinta a emoção de cada gol e cada nocaute! Baixe o FUTUFCTV para Android e tenha mais de 1000 canais, Premiere, Combate e campeonatos grátis.">
+<meta property="og:title" content="FUTUFCTV – Baixar o aplicativo oficial">
+<meta property="og:description" content="Assista a todas as emoções do esporte ao vivo no seu celular.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0b0f">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚽%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fundo: #0b0b0f;
+    --superficie: #14141b;
+    --linha: #232a3b;
+    --verde: #2ee59d;
+    --verde-texto: #04130c;
+    --vermelho: #ff3b4d;
+    --texto: #f2f5fa;
+    --suave: #8b94a7;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--verde); outline-offset: 3px; border-radius: 6px; }
+
+  .pagina { max-width: 1080px; margin: 0 auto; padding: 28px 22px 56px; }
+
+  .marca {
+    font-weight: 900;
+    font-stretch: 112%;
+    letter-spacing: -0.02em;
+    font-size: 26px;
+    line-height: 1;
+  }
+  .marca .a { color: var(--verde); }
+  .marca .b { color: #fff; }
+  .marca .c { color: var(--vermelho); }
+
+  .topo { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+  .badge-vip {
+    background: rgba(255, 59, 77, 0.12);
+    color: var(--vermelho);
+    border: 1px solid rgba(255, 59, 77, 0.35);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    animation: pulsa-badge 2s infinite;
+  }
+  @keyframes pulsa-badge { 50% { opacity: 0.6; } }
+
+  .heroi { display: grid; gap: 44px; align-items: center; }
+  @media (min-width: 860px) {
+    .heroi { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
+    .pagina { padding-top: 20px; }
+  }
+
+  h1 {
+    margin: 0 0 18px;
+    font-size: clamp(34px, 7.5vw, 60px);
+    line-height: 1.05;
+    font-weight: 900;
+    font-stretch: 105%;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  h1 span { color: var(--verde); }
+  .lead { margin: 0 0 30px; color: var(--suave); font-size: 18px; max-width: 38ch; }
+
+  .baixar {
+    display: flex;
+    width: 100%;
+    max-width: 440px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 68px;
+    padding: 16px 28px;
+    background: var(--verde);
+    color: var(--verde-texto);
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: 900;
+    font-stretch: 105%;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    box-shadow: 0 10px 34px rgba(46, 229, 157, 0.28);
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .baixar:hover { background: #4af0ae; }
+  .baixar:active { transform: translateY(2px) scale(.99); box-shadow: 0 4px 16px rgba(46, 229, 157, 0.25); }
+  .baixar svg { width: 26px; height: 26px; flex: none; }
+  .nota { margin: 14px 0 0; color: var(--suave); font-size: 14.5px; }
+
+  /* Celular com a tela do app (Design Original) */
+  .celular-area { display: flex; justify-content: center; }
+  .celular {
+    width: min(270px, 74vw);
+    aspect-ratio: 9 / 18;
+    background: var(--fundo);
+    border: 7px solid var(--linha);
+    border-radius: 38px;
+    padding: 18px 14px 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 70px rgba(0,0,0,.55), 0 0 0 1px #000;
+  }
+  .celular::before {
+    content: ""; position: absolute; top: 8px; left: 50%; width: 50px; height: 5px;
+    background: #000; border-radius: 4px; transform: translateX(-50%);
+  }
+  .celular .marca { font-size: 15px; margin: 8px 0 12px; }
+  .destaque {
+    height: 168px;
+    border-radius: 16px;
+    background:
+      radial-gradient(120px 90px at 82% 18%, rgba(46,229,157,.38), transparent 70%),
+      radial-gradient(140px 100px at 10% 100%, rgba(255,59,77,.28), transparent 70%),
+      var(--superficie);
+    padding: 14px;
+    display: flex; flex-direction: column; justify-content: flex-end; gap: 9px;
+  }
+  .ao-vivo { display: flex; align-items: center; gap: 7px; font-weight: 800; font-size: 13px; line-height: 1.2; }
+  .ponto { width: 10px; height: 10px; border-radius: 50%; background: var(--vermelho); flex: none; animation: pulsa 1.8s ease-in-out infinite; }
+  @keyframes pulsa { 50% { opacity: .35; } }
+  .assistir {
+    align-self: flex-start; background: var(--verde); color: var(--verde-texto);
+    font-weight: 900; font-size: 11px; padding: 6px 14px; border-radius: 14px;
+  }
+  .secao { display: flex; align-items: center; gap: 7px; margin: 16px 0 8px; font-weight: 800; font-size: 12px; }
+  .secao::before { content: ""; width: 3px; height: 14px; border-radius: 2px; background: var(--verde); }
+  .fileira { display: flex; gap: 8px; margin-right: -14px; }
+  .mini {
+    flex: none; width: 82px; height: 108px; border-radius: 12px; background: var(--superficie);
+    border: 1px solid var(--linha);
+  }
+  .mini:nth-child(2) { background: linear-gradient(160deg, #1d2a4d, var(--superficie)); }
+  .mini:nth-child(3) { background: linear-gradient(160deg, #3a1d2a, var(--superficie)); }
+
+  /* Seções de Competições e Marcas Profissionais */
+  .secao-conteudo { margin-top: 70px; }
+  .secao-conteudo h3 { font-size: 20px; font-weight: 900; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .secao-conteudo p { color: var(--suave); font-size: 15px; margin-bottom: 24px; }
+
+  .grade-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (min-width: 768px) {
+    .grade-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .card-item {
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    padding: 18px 14px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform .2s, border-color .2s;
+  }
+  .card-item:hover { border-color: var(--verde); transform: translateY(-3px); }
+  .card-item strong { display: block; font-size: 16px; font-weight: 900; color: var(--texto); }
+  .card-item span { display: block; font-size: 12.5px; color: var(--suave); font-weight: 600; margin-top: 4px; }
+
+  /* Blocos de conteúdo originais */
+  .bloco { margin-top: 84px; display: grid; gap: 26px; }
+  @media (min-width: 860px) { .bloco { grid-template-columns: 0.8fr 1.2fr; gap: 64px; } }
+  h2 { margin: 0; font-size: clamp(26px, 5vw, 36px); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; }
+
+  .lista { list-style: none; margin: 0; padding: 0; }
+  .lista li { padding: 18px 0; border-top: 1px solid var(--linha); }
+  .lista li:last-child { border-bottom: 1px solid var(--linha); }
+  .lista strong { display: block; font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+  .lista span { color: var(--suave); }
+
+  ol.passos { list-style: none; margin: 0; padding: 0; counter-reset: p; }
+  ol.passos li { counter-increment: p; display: grid; grid-template-columns: 38px 1fr; gap: 14px; padding: 16px 0; border-top: 1px solid var(--linha); }
+  ol.passos li:last-child { border-bottom: 1px solid var(--linha); }
+  ol.passos li::before {
+    content: counter(p); width: 32px; height: 32px; border-radius: 50%;
+    display: grid; place-items: center; background: var(--verde); color: var(--verde-texto); font-weight: 900; font-size: 15px;
+  }
+
+  .aviso { margin-top: 22px; color: var(--suave); font-size: 15px; }
+  .aviso b { color: var(--texto); }
+
+  .rodape { margin-top: 84px; padding-top: 22px; border-top: 1px solid var(--linha); display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; color: var(--suave); font-size: 14.5px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ponto { animation: none; }
+    .baixar { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="pagina">
+
+  <header class="topo">
+    <div class="marca" aria-label="FUTUFCTV"><span class="a">FUTU</span><span class="b">FC</span><span class="c">TV</span></div>
+    <div class="badge-vip">🔥 Transmissão Ao Vivo & Sem Travas</div>
+  </header>
+
+  <main>
+    <section class="heroi">
+      <div>
+        <h1>Sinta a verdadeira <span>emoção do esporte</span> na palma da sua mão!</h1>
+        <p class="lead">Não perca nenhum lance do seu time do coração nem o grito de nocaute no octógono. Mais de 1.000 canais liberados em tempo real para você assistir de graça no Android.</p>
+
+        <a class="baixar" id="baixar" href="https://github.com/pauloraquel221-prog/futufc-config/releases/download/v1/futufctv.apk" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></svg>
+          Baixar o Aplicativo Grátis
+        </a>
+        <p class="nota">⚡ Acesso imediato • APK seguro para Android (aprox. 100 MB)</p>
+      </div>
+
+      <div class="celular-area" aria-hidden="true">
+        <div class="celular">
+          <div class="marca"><span class="a">FUTU</span><span class="b">FC</span><span class="c">TV</span></div>
+          <div class="destaque">
+            <div class="ao-vivo"><span class="ponto"></span>O Clímax do Jogo Ao Vivo</div>
+            <span class="assistir">Assistir Agora</span>
+          </div>
+          <div class="secao">Ao vivo agora</div>
+          <div class="fileira"><div class="mini"></div><div class="mini"></div><div class="mini"></div><div class="mini"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marcas e Provedores de TV -->
+    <section class="secao-conteudo">
+      <h3>📺 Todos os Canais Oficiais Inclusos</h3>
+      <p>As maiores redes esportivas do planeta reunidas no seu telemóvel:</p>
+      <div class="grade-grid">
+        <div class="card-item"><strong>PREMIERE</strong><span>Brasileirão Série A & B</span></div>
+        <div class="card-item"><strong>COMBATE</strong><span>UFC & Artes Marciais</span></div>
+        <div class="card-item"><strong>PARAMOUNT+</strong><span>Libertadores & Sul-Americana</span></div>
+        <div class="card-item"><strong>ESPN / DISNEY+</strong><span>Futebol Internacional</span></div>
+        <div class="card-item"><strong>TNT SPORTS</strong><span>Champions League</span></div>
+        <div class="card-item"><strong>MAX</strong><span>Esportes & Séries</span></div>
+        <div class="card-item"><strong>CAZÉTV</strong><span>Grandes Eventos ao Vivo</span></div>
+        <div class="card-item"><strong>SPORTV</strong><span>Cobertura Completa 24h</span></div>
+      </div>
+    </section>
+
+    <!-- Principais Competições de Futebol e Lutas -->
+    <section class="secao-conteudo">
+      <h3>🏆 Competições Épicas em Tempo Real</h3>
+      <p>Viva cada segundo de tensão e glória das maiores disputas mundiais:</p>
+      <div class="grade-grid">
+        <div class="card-item"><strong>UFC & Lutas</strong><span>Cards Estelares & Cinturões</span></div>
+        <div class="card-item"><strong>Libertadores</strong><span>A Glória Eterna da América</span></div>
+        <div class="card-item"><strong>Champions League</strong><span>O Melhor Futebol do Mundo</span></div>
+        <div class="card-item"><strong>Brasileirão</strong><span>Emoção de Ponta a Ponta</span></div>
+        <div class="card-item"><strong>Copa do Brasil</strong><span>Jogos Decisivos de Mata-Mata</span></div>
+        <div class="card-item"><strong>Futebol Europeu</strong><span>Premier League, La Liga & Italianão</span></div>
+      </div>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-recursos">
+      <h2 id="t-recursos">O que você encontra no app</h2>
+      <ul class="lista">
+        <li><strong>Tudo na tela inicial</strong><span>Os catálogos de futebol e lutas organizados em fileiras, com o duelo mais aguardado em destaque no topo.</span></li>
+        <li><strong>Player simples e ultra leve</strong><span>Assista sem travamentos, com comandos fáceis para ajustar o ritmo da partida com um toque.</span></li>
+        <li><strong>Chat dos eventos ao vivo</strong><span>Compartilhe a paixão com outros torcedores e receba alertas do administrador em tempo real.</span></li>
+        <li><strong>Atualização automática inteligente</strong><span>Novos links e conteúdos entram direto ao abrir o aplicativo, sem precisar baixar novas versões.</span></li>
+      </ul>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-instalar">
+      <h2 id="t-instalar">Como instalar no seu celular</h2>
+      <div>
+        <ol class="passos">
+          <li><span>Toque em <b>Baixar o Aplicativo Grátis</b> e aguarde o arquivo APK terminar o download.</span></li>
+          <li><span>Abra o arquivo baixado. Se o Android solicitar, permita a instalação de fontes desconhecidas para o seu navegador.</span></li>
+          <li><span>Se aparecer um aviso do Play Protect, toque em <b>Mais detalhes</b> e depois em <b>Instalar mesmo assim</b>.</span></li>
+          <li><span>Abra o app conectado à internet e prepare-se para vibrar com cada gol e cada vitória!</span></li>
+        </ol>
+        <p class="aviso"><b>Exclusivo para Android.</b> O aplicativo não é compatível com o sistema iOS (iPhone).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="marca" style="font-size:18px" aria-label="FUTUFCTV"><span class="a">FUTU</span><span class="b">FC</span><span class="c">TV</span></div>
+    <div style="color: var(--suave); font-size: 14px;">© FUTUFCTV. Viva a emoção do esporte.</div>
+  </footer>
+
+</div>
+</body>
+</html>
