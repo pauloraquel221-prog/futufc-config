@@ -2,6 +2,7 @@
   "ativo": true,
   "mensagem": "",
   "addons": [
+    "https://addon-stremio-wrestling-ufc-o6mq.vercel.app/manifest.json",
     "https://mediafusion.elfhosted.com/manifest.json",
     "https://sportsfree-us2.highfly.to/c70c0213-76fd-4fc7-a4a1-b3a82ca840c3.5e4439400a51bba1/manifest.json",
     "https://sports.highfly.to/39371ca5-c6fa-41c6-b0b9-623fb482d8a3.44d77c531a27af4f/manifest.json",
