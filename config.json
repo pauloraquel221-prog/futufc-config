@@ -2,6 +2,7 @@
   "ativo": true,
   "mensagem": "",
   "addons": [
+    "https://raw.githubusercontent.com/Unitvteste/Iracemaflix/10ae660080c7afa40d20bdef5b8e0afbfc5d6024/playlist-real-full.m3u",
     "https://addon-stremio-wrestling-ufc-o6mq.vercel.app/manifest.json",
     "https://mediafusion.elfhosted.com/manifest.json",
     "https://sportsfree-us2.highfly.to/c70c0213-76fd-4fc7-a4a1-b3a82ca840c3.5e4439400a51bba1/manifest.json",
