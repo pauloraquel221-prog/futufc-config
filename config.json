@@ -1,5 +1,6 @@
 {
   "addons": [
-    "https://pauloraquel221-prog.github.io/futufc-tv-addon/manifest.json"
+    "https://pauloraquel221-prog.github.io/futufc-tv-addon/manifest.json",
+    "https://sports.highfly.dev/manifest.json"
   ]
 }
